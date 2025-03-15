@@ -17,81 +17,78 @@ Skillify is a comprehensive platform designed to bridge the gap between job seek
 *   **Real-time Collaboration Tools:** Foster seamless communication between candidates and recruiters through integrated messaging and feedback systems.
 
 ## 📁 Folder Structure
-skillify/
-├── Backend/ # Server-side code (Node.js, Express)
-├── Frontend/ # Client-side code (React, JavaScript)
-├── Documentation/ # Project documentation (API, setup)
-└── README.md # This file (project overview)
+
+The project follows a modular structure with clear separation of concerns.
+
+*   ⚙️ **Backend/**: Server-side code (Node.js, Express)
+*   ⚛️ **Frontend/**: Client-side code (React, JavaScript)
+*   📚 **Documentation/**: Project documentation (API, setup)
+*   📄 **README.md**: This file (project overview)
 
 ### ⚙️ Backend/
 
 The `Backend` directory contains the server-side logic, built with Node.js and Express. It manages data models, API endpoints, and database interactions.
-Backend/
-├── models/ # Data models (MongoDB, Mongoose)
-│ ├── user.js # User schema (authentication, profile)
-│ ├── job.js # Job posting schema
-│ ├── skill.js # Skill schema
-│ ├── assessment.js # Assessment schema
-│ └── ...
-├── controllers/ # Request handling logic
-│ ├── authController.js # Authentication endpoints (login, signup, password reset)
-│ ├── jobController.js # Job-related endpoints (CRUD operations)
-│ ├── skillController.js # Skill management endpoints
-│ ├── assessmentController.js # Assessment creation/evaluation
-│ └── ...
-├── routes/ # API endpoint definitions
-│ ├── authRoutes.js # Authentication routes (/api/auth)
-│ ├── jobRoutes.js # Job routes (/api/jobs)
-│ ├── skillRoutes.js # Skill routes (/api/skills)
-│ ├── assessmentRoutes.js # Assessment routes (/api/assessments)
-│ └── ...
-├── middleware/ # Middleware functions
-│ ├── authMiddleware.js # Protect routes requiring authentication
-│ ├── errorMiddleware.js # Global error handling
-│ └── ...
-├── config/ # Configuration files
-│ ├── database.js # MongoDB connection setup (Mongoose)
-│ ├── auth.js # Authentication configuration (JWT)
-│ └── ...
-├── utils/ # Utility functions
-│ ├── asyncHandler.js # Handle asynchronous errors efficiently
-│ ├── generateToken.js # Generate JWT tokens
-│ └── ...
-├── server.js # Main server file (Express app initialization)
-├── package.json # Project dependencies and scripts
-└── .env # Environment variables (DO NOT COMMIT!)
+
+| Directory/File    | Description                                                            |
+| :------------------ | :--------------------------------------------------------------------- |
+| `models/`           | Data models (MongoDB, Mongoose)                                      |
+| `models/user.js`    | User schema (authentication, profile)                                 |
+| `models/job.js`     | Job posting schema                                                     |
+| `models/skill.js`   | Skill schema                                                           |
+| `models/assessment.js`| Assessment schema                                                      |
+| `controllers/`      | Request handling logic                                                  |
+| `controllers/authController.js`| Authentication endpoints (login, signup, password reset)              |
+| `controllers/jobController.js`| Job-related endpoints (CRUD operations)                               |
+| `controllers/skillController.js`| Skill management endpoints                                             |
+| `controllers/assessmentController.js`| Assessment creation/evaluation                                             |
+| `routes/`           | API endpoint definitions                                                |
+| `routes/authRoutes.js`| Authentication routes (/api/auth)                                       |
+| `routes/jobRoutes.js`| Job routes (/api/jobs)                                                |
+| `routes/skillRoutes.js`| Skill routes (/api/skills)                                               |
+| `routes/assessmentRoutes.js`| Assessment routes (/api/assessments)                                          |
+| `middleware/`       | Middleware functions                                                   |
+| `middleware/authMiddleware.js`| Protect routes requiring authentication                                   |
+| `middleware/errorMiddleware.js`| Global error handling                                                        |
+| `config/`           | Configuration files                                                     |
+| `config/database.js`| MongoDB connection setup (Mongoose)                                      |
+| `config/auth.js`    | Authentication configuration (JWT)                                         |
+| `utils/`            | Utility functions                                                      |
+| `utils/asyncHandler.js`| Handle asynchronous errors efficiently                                   |
+| `utils/generateToken.js`| Generate JWT tokens                                                      |
+| `server.js`         | Main server file (Express app initialization)                           |
+| `package.json`      | Project dependencies and scripts                                        |
+| `.env`              | Environment variables (DO NOT COMMIT!)                                |
 
 ### ⚛️ Frontend/
 
 The `Frontend` directory houses the client-side code, built with React. It manages user interfaces, API interactions, and state management.
-Frontend/
-├── components/ # Reusable UI components
-│ ├── Button.js # Customizable button component
-│ ├── Input.js # Input field component
-│ ├── JobCard.js # Job posting card component
-│ ├── SkillBadge.js # Display skill badges/tags
-│ └── ...
-├── pages/ # Application pages/views
-│ ├── Home.js # Landing page with skill discovery
-│ ├── Login.js # User login page
-│ ├── Signup.js # User signup page
-│ ├── JobListing.js # Job listing page with filtering
-│ ├── Assessment.js # Interactive skill assessment page
-│ └── ...
-├── routes/ # Routing configuration
-│ └── AppRoutes.js # Defines application routes using React Router
-├── api/ # API interaction
-│ └── apiClient.js # Handles API calls to the backend
-├── context/ # State management using Context API
-│ └── AuthContext.js # Manages user authentication state
-├── styles/ # Styling (CSS, Tailwind CSS, etc.)
-│ ├── App.css # Global CSS styles
-│ ├── tailwind.config.js # Tailwind CSS configuration (if used)
-│ └── ...
-├── App.js # Main application component
-├── index.js # Entry point for React application
-├── package.json # Project dependencies and scripts
-└── .env.local # Environment variables for the frontend (DO NOT COMMIT!)
+
+| Directory/File          | Description                                                      |
+| :------------------------ | :--------------------------------------------------------------- |
+| `components/`            | Reusable UI components                                           |
+| `components/Button.js`   | Customizable button component                                      |
+| `components/Input.js`    | Input field component                                           |
+| `components/JobCard.js`  | Job posting card component                                         |
+| `components/SkillBadge.js`| Display skill badges/tags                                        |
+| `pages/`                 | Application pages/views                                            |
+| `pages/Home.js`          | Landing page with skill discovery                                  |
+| `pages/Login.js`         | User login page                                                 |
+| `pages/Signup.js`        | User signup page                                                |
+| `pages/JobListing.js`    | Job listing page with filtering                                    |
+| `pages/Assessment.js`    | Interactive skill assessment page                                  |
+| `routes/`                | Routing configuration                                             |
+| `routes/AppRoutes.js`     | Defines application routes using React Router                     |
+| `api/`                   | API interaction                                                   |
+| `api/apiClient.js`      | Handles API calls to the backend                                 |
+| `context/`               | State management using Context API                                 |
+| `context/AuthContext.js` | Manages user authentication state                                 |
+| `styles/`                | Styling (CSS, Tailwind CSS, etc.)                                |
+| `styles/App.css`         | Global CSS styles                                                |
+| `styles/tailwind.config.js`| Tailwind CSS configuration (if used)                            |
+| `App.js`                 | Main application component                                         |
+| `index.js`               | Entry point for React application                                   |
+| `package.json`           | Project dependencies and scripts                                   |
+| `.env.local`             | Environment variables for the frontend (DO NOT COMMIT!)           |
 
 ### 📚 Documentation/
 
